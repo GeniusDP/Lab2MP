@@ -22,7 +22,22 @@ fun date_to_string(date: (int*int*int)) =
     ^ Int.toString(#3 date) ^ ", " ^ Int.toString(#1 date);
 
 
+fun provided_test1 () = 
+    let val date = (1966, 04, 21)
+    in
+        date_to_string(date)
+    end;
+
+
+fun provided_test2 () = 
+    let val date = (2008, 08, 08)
+    in
+        date_to_string(date)
+    end;
+
+
+
 (* === Tests === *)
 
-val stringDate = date_to_string((1966, 04, 21));
-val stringDate = date_to_string((2008, 08, 08));
+val stringDate = provided_test1();
+val stringDate = provided_test2();
