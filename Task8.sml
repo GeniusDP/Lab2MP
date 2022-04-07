@@ -7,11 +7,32 @@ fun number_before_reaching_sum(sum: int, array: int list) =
     else if sum - hd(array) <= 0 then 0 
     else 1 + number_before_reaching_sum(sum - hd(array), tl(array));
 
-val array = [1, 2, 3, 4, 5, 6, 7];
-
 (* === Tests === *)
 
+fun provided_test1 () = 
+    let val array = [1, 2, 3, 4, 5, 6, 7]
+        val sum = 14
+    in
+        number_before_reaching_sum( sum, array )
+    end;
 
-val n = number_before_reaching_sum( 14, array );(*n = 4*)
-val n = number_before_reaching_sum( 15, array );(*n = 4*)
-val n = number_before_reaching_sum( 16, array );(*n = 5*)
+
+fun provided_test2 () = 
+    let val array = [1, 2, 3, 4, 5, 6, 7]
+        val sum = 15
+    in
+        number_before_reaching_sum( sum, array )
+    end;
+
+
+fun provided_test3 () = 
+    let val array = [1, 2, 3, 4, 5, 6, 7]
+        val sum = 16
+    in
+        number_before_reaching_sum( sum, array )
+    end;
+
+
+val n = provided_test1();(*n = 4*)
+val n = provided_test2();(*n = 4*)
+val n = provided_test3();(*n = 5*)
