@@ -40,4 +40,12 @@ fun month_range(day1: int, day2: int) =
 
 (* === Tests === *)
 
-val result = month_range(29, 33);
+
+fun provided_test1 () = 
+    let val day1 = 29
+        val day2 = 33
+    in
+        month_range(day1, day2)
+    end;
+
+val result = provided_test1();
