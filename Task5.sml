@@ -13,9 +13,35 @@ fun solveProblem5(dateList: (int*int*int) list, monthList: int list) =
     else 
     number_in_month(dateList, hd monthList)@solveProblem5(dateList, tl monthList);
 
-val dateList = [(2002, 7, 24), (2005, 5, 11), 
-    (1966, 4, 21), (1961, 4, 12), (1954, 3, 13)];
 
-val cnt = solveProblem5(dateList, [3, 4, 5, 7]);(*all ==> cnt = 5*)
-val cnt = solveProblem5(dateList, [3, 4]);(*cnt = 3*)
-val cnt = solveProblem5(dateList, []);(*cnt = 0*)
+(* === Tests === *)
+
+fun provided_test1 () = 
+    let val dateList = [(2002, 7, 24), (2005, 5, 11), 
+            (1966, 4, 21), (1961, 4, 12), (1954, 3, 13)]
+        val monthList = [3, 4, 5, 7]
+    in
+         solveProblem5(dateList, monthList)
+    end;
+    
+fun provided_test2 () = 
+    let val dateList = [(2002, 7, 24), (2005, 5, 11), 
+            (1966, 4, 21), (1961, 4, 12), (1954, 3, 13)]
+        val monthList = [3, 4]
+    in
+         solveProblem5(dateList, monthList)
+    end;
+    
+
+fun provided_test3 () = 
+    let val dateList = [(2002, 7, 24), (2005, 5, 11), 
+            (1966, 4, 21), (1961, 4, 12), (1954, 3, 13)]
+        val monthList = []
+    in
+         solveProblem5(dateList, monthList)
+    end;
+
+
+val cnt = provided_test1();(*all ==> cnt = 5*)
+val cnt = provided_test2();(*cnt = 3*)
+val cnt = provided_test3();(*cnt = 0*)
