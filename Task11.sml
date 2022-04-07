@@ -23,11 +23,23 @@ fun legacy(xs: (int*int*int) list) =
         end;
             
 
-val dateList = [(2002, 7, 24), (2005, 5, 11), 
-    (1966, 4, 21), (1961, 4, 12), (1954, 3, 13)];
-
 (* === Tests === *)
 
-val result = legacy( dateList );
-val result = legacy( [] );
+fun provided_test1 () = 
+    let val dateList = [(2002, 7, 24), (2005, 5, 11), 
+    (1966, 4, 21), (1961, 4, 12), (1954, 3, 13)]
+    in
+        legacy( dateList )
+    end;
+
+
+fun provided_test2 () = 
+    let val dateList = []
+    in
+        legacy( dateList )
+    end;
+
+
+val result = provided_test1();
+val result = provided_test2();
 
