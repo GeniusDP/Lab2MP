@@ -37,4 +37,7 @@ fun month_range(day1: int, day2: int) =
 
 
 (* result *)
+
+(* === Tests === *)
+
 val result = month_range(29, 33);

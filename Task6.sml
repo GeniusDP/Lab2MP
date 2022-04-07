@@ -5,6 +5,10 @@ fun get_nth(stringList: string list, n: int) =
 val array = ["evgeniya", "alexandra", "anna", 
 "kamila", "daria", "alina"];
 
+
+(* === Tests === *)
+
+
 val third = get_nth(array, 1);
 val third = get_nth(array, 3);
 val third = get_nth(array, 6);

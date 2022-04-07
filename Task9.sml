@@ -24,4 +24,7 @@ val daysPerMonth = [
 
 val dayOfYear = 400;
 
+
+(* === Tests === *)
+
 val resultMonth = what_month(dayOfYear, daysPerMonth);

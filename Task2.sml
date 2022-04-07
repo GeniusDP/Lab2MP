@@ -5,6 +5,8 @@ fun number_in_month(dateList: (int*int*int) list, monthNumber: int) =
         number_in_month( tl dateList, monthNumber ) + 
             (if #2 (hd dateList) = monthNumber then 1 else 0);
 
+(* === Tests === *)
+
 fun provided_test1 () = 
     let val array = [(2002, 7, 24), (2005, 5, 11), 
         (1966, 4, 21), (1961, 4, 12), (1954, 3, 13)]

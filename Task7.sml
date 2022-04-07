@@ -21,5 +21,8 @@ fun date_to_string(date: (int*int*int)) =
     get_nth(monthNames, #2 date)^ " " 
     ^ Int.toString(#3 date) ^ ", " ^ Int.toString(#1 date);
 
+
+(* === Tests === *)
+
 val stringDate = date_to_string((1966, 04, 21));
 val stringDate = date_to_string((2008, 08, 08));

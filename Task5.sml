@@ -16,6 +16,9 @@ fun solveProblem5(dateList: (int*int*int) list, monthList: int list) =
 val dateList = [(2002, 7, 24), (2005, 5, 11), 
     (1966, 4, 21), (1961, 4, 12), (1954, 3, 13)];
 
+(* === Tests === *)
+
+
 val cnt = solveProblem5(dateList, [3, 4, 5, 7]);(*all ==> cnt = 5*)
 val cnt = solveProblem5(dateList, [3, 4]);(*cnt = 3*)
 val cnt = solveProblem5(dateList, []);(*cnt = 0*)

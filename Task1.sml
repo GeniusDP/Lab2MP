@@ -11,6 +11,8 @@ fun is_older(firstDate: int*int*int, secondDate: int*int*int) =
             else if (#3 firstDate) > (#3 secondDate) then false
             else false;
 
+(* === Tests === *)
+
 fun provided_test1 () = 
     let val date1 = (2002, 7, 24)
          val date2 = (2005, 5, 11)

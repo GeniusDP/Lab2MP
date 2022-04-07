@@ -10,6 +10,7 @@ fun solveProblem3(dateList: (int*int*int) list, monthList: int list) =
         else number_in_month(dateList, hd monthList) 
             + solveProblem3(dateList, tl monthList);
 
+(* === Tests === *)
 
 fun provided_test1 () = 
     let val dateList = [(2002, 7, 24), (2005, 5, 11), 
